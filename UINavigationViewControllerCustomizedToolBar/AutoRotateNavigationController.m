@@ -49,11 +49,12 @@
     _bottomToolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [self.view addSubview:_bottomToolbar];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:(CGRect){0, 0, CGRectGetWidth(_bottomToolbar.frame), 1.f / [UIScreen mainScreen].scale}];
-    lineView.backgroundColor = kLineViewColor;
-    // keep at top with fixed height
-    lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    [_bottomToolbar addSubview:lineView];
+    // UIToolbar has a line on the top of the view, so no need to add one
+//    UIView *lineView = [[UIView alloc] initWithFrame:(CGRect){0, 0, CGRectGetWidth(_bottomToolbar.frame), 1.f / [UIScreen mainScreen].scale}];
+//    lineView.backgroundColor = kLineViewColor;
+//    // keep at top with fixed height
+//    lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+//    [_bottomToolbar addSubview:lineView];
     
     [self setupToolBar];
 }
