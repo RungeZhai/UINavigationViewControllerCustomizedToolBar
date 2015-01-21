@@ -65,6 +65,10 @@
 }
 
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
 #pragma mark - customized toolbar
 
 - (void)setupToolBar {
